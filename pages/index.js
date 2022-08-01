@@ -3,7 +3,8 @@ import Header from "../components/Header";
 import Loader from "../components/loader";
 import Sidebar from "../components/Sidebar";
 import useTimeout from "../hooks/useTimeout";
-import HeroSection from "../sections/hero-section";
+import HeroSection from "../components/sections/hero-section";
+import SkillsSection from "../components/sections/skills-section";
 
 export default function Home() {
 
@@ -11,12 +12,13 @@ export default function Home() {
 
     useTimeout(()=>{
         setIsLoaderVisible(false);
-    },2000);
+    },100);
 
     return (
         <>
             { isLoaderVisible && <Loader /> }
-            <div className="fixed top-0 w-full sm:ml-[6.25rem] sm:w-[calc(100vw-6.25rem)]">
+
+            <div className="fixed top-0 w-full sm:ml-[6.25rem] sm:w-[calc(100%-6.25rem)]">
                 <div className="container mx-auto px-3">
                     <Header />
                 </div>
@@ -29,6 +31,12 @@ export default function Home() {
             <div className="sm:ml-[6.25rem]">
                 <div className="container mx-auto px-3 pt-[6.25rem]">
                     <HeroSection />
+                </div>
+                <div className="container mx-auto px-3 pt-[6.25rem]">
+                    <SkillsSection   />
+                </div>
+                <div className="container mx-auto px-3 pt-[6.25rem]">
+                    
                 </div>
             </div>
         </>

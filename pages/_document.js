@@ -18,7 +18,7 @@ export default function Document() {
                     rel="stylesheet"
                 ></link>
             </Head>
-            <body>
+            <body className="max-w-full">
                 <Main />
                 <NextScript />
             </body>

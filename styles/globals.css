@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    -webkit-tap-highlight-color: transparent ;
+}
+
 body {
     background : linear-gradient(135deg,hsl(221, 17%, 18%),hsl(221, 17%, 8%));
     background-image: url("/bg.png");
@@ -49,4 +53,63 @@ html {
             0% 20%
         );
     }
+}
+
+@layer components {
+    .honeycomb {
+        --hex-size : min(200px,16vw) ;
+        position: relative ;
+        width  : calc(5 * var(--hex-size)) ;
+        height : calc(4 * var(--hex-size)) ;
+        margin : 0 auto ;
+    }
+    
+    .hex {
+        --x: 0 ;
+        --y: 0 ;
+        position: absolute ;
+        top   : calc(var(--hex-size) * var(--y) + var(--hex-size) / 4 );
+        left  : calc(var(--hex-size) * var(--x) );
+        width : var(--hex-size);
+        height: var(--hex-size);
+        transition: all 200ms ease-out ;
+        cursor: pointer ;
+        user-select:none;
+    }
+
+    .hex:hover {
+        z-index: 10 ;
+    }
+
+    .hex::before {
+        position: absolute ;
+        content: "";
+        top: 50% ;
+        left: 50% ;
+        width : 100% ;
+        height: 100% ;
+        transform: translate(-50%,-50%);
+        background-image: url("/hexagon.svg");
+        background-size: contain ;
+        background-repeat: no-repeat ;
+        background-position: center ;
+        opacity: 0.25;
+    }
+    
+    .hex[data-id="1"]  { --x: 0.9219 ; --y: 0.0000;}
+    .hex[data-id="2"]  { --x: 1.8359 ; --y: 0.0000;}
+    .hex[data-id="3"]  { --x: 2.7578 ; --y: 0.0000;}
+    .hex[data-id="4"]  { --x: 0.4609 ; --y: 0.7969;}
+    .hex[data-id="5"]  { --x: 1.3828 ; --y: 0.7969;}
+    .hex[data-id="6"]  { --x: 2.2969 ; --y: 0.7969;}
+    .hex[data-id="7"]  { --x: 3.2188 ; --y: 0.7969;}
+    .hex[data-id="8"]  { --x: 0.0000 ; --y: 1.6016;}
+    .hex[data-id="9"]  { --x: 0.9219 ; --y: 1.6016;}
+    .hex[data-id="10"] { --x: 1.8400 ; --y: 1.6016;}
+    .hex[data-id="11"] { --x: 2.7578 ; --y: 1.6016;}
+    .hex[data-id="12"] { --x: 3.6797 ; --y: 1.6016;}
+    .hex[data-id="13"] { --x: 0.4609 ; --y: 2.3984;}
+    .hex[data-id="14"] { --x: 1.3828 ; --y: 2.3984;}
+    .hex[data-id="15"] { --x: 2.2969 ; --y: 2.3984;}
+    .hex[data-id="16"] { --x: 3.2188 ; --y: 2.3984;}
 }
