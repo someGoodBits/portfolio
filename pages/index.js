@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Header from "../components/Header";
-import Loader from "../components/loader";
-import Sidebar from "../components/Sidebar";
 import useTimeout from "../hooks/useTimeout";
-import HeroSection from "../components/sections/hero-section";
-import SkillsSection from "../components/sections/skills-section";
+
+import Header from "../components/Header";
+import Loader from "../components/Loader";
+import Sidebar from "../components/Sidebar";
+import HeroSection from "../components/sections/HeroSection";
+import SkillSection from "../components/sections/SkillSection";
 
 export default function Home() {
 
@@ -28,15 +29,15 @@ export default function Home() {
                 <Sidebar />
             </div>
 
-            <div className="sm:ml-[6.25rem]">
+            <div className="sm:ml-[6.25rem] overflow-hidden h-full">
                 <div className="container mx-auto px-3 pt-[6.25rem]">
                     <HeroSection />
                 </div>
                 <div className="container mx-auto px-3 pt-[6.25rem]">
-                    <SkillsSection   />
+                    <SkillSection />
                 </div>
                 <div className="container mx-auto px-3 pt-[6.25rem]">
-                    
+                    <SkillSection />
                 </div>
             </div>
         </>

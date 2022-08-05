@@ -1,4 +1,4 @@
-import HeaderNavLinks from "./HeaderNavLinks";
+import HeaderNavItem from "./HeaderNavItem";
 
 const Header = () => {
     return (
@@ -12,19 +12,19 @@ const Header = () => {
             <nav className="flex items-center">
                 <ul className="hidden lg:flex text-lg font-orbitron font-normal space-x-4 text-gray-500">
                     <li>
-                        <HeaderNavLinks label="about" isActive={true} />
+                        <HeaderNavItem label="about" isActive={true} />
                     </li>
                     <li>
-                        <HeaderNavLinks label="skills" />
+                        <HeaderNavItem label="skills" />
                     </li>
                     <li>
-                        <HeaderNavLinks label="experience" />
+                        <HeaderNavItem label="experience" />
                     </li>
                     <li>
-                        <HeaderNavLinks label="projects" />
+                        <HeaderNavItem label="projects" />
                     </li>
                     <li>
-                        <HeaderNavLinks label="contact" />
+                        <HeaderNavItem label="contact" />
                     </li>
                 </ul>
                 <div className="ml-3 group w-12 h-12 flex items-center justify-center cursor-pointer hover:bg-accent-500 rounded-md">

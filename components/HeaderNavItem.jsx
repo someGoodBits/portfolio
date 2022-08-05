@@ -1,4 +1,4 @@
-const HeaderNavLinks = ({ label = "", isActive = false }) => {
+const HeaderNavItem = ({ label = "", isActive = false }) => {
     return isActive ? (
         <span className="text-white font-black cursor-pointer">
             <span className="text-accent-500 font-code">./</span>
@@ -9,4 +9,4 @@ const HeaderNavLinks = ({ label = "", isActive = false }) => {
     );
 };
 
-export default HeaderNavLinks;
+export default HeaderNavItem;

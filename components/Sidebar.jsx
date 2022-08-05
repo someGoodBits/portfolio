@@ -1,11 +1,9 @@
-import SidebarIndicator from "./Indicators/SidebarIndicator";
 import RoundLogo from "./RoundLogo";
 
 const Sidebar = ({ width = "6.25rem" }) => {
     return (
         <div className="fixed left-0 top-0 h-screen" style={{ width }}>
             <svg className="w-full" viewBox="0 0 120 1805" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <SidebarIndicator activeClass="fill-gray-200" inactiveClass="fill-gray-500"/>
                 <path
                     d="M-3.05176e-05 0.989258H100V114L120 124L120 324L100 334V696L80 706V786L100 796L100 1264L120 1274V1554L100 1564V1804.26L-3.05176e-05 1804.25V0.989258Z"
                     fill="#414858"

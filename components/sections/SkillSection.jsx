@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import HexSubMenu from '../submenu'
+import HexSubMenu from '../HexSubMenu'
 
 import CodeIcon from '../../public/icons/code.svg'
 import CSSIcon from '../../public/icons/css.svg'
@@ -33,7 +33,7 @@ import PostmanIcon from '../../public/icons/postman.svg';
 
 
 
-const SkillsSection = () => {
+const SkillSection = () => {
 
     const languagesSubMenuRef = useRef();
     const jsSubMenuRef = useRef();
@@ -151,4 +151,4 @@ const SkillsSection = () => {
     );
 }
  
-export default SkillsSection;
+export default SkillSection;
