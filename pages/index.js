@@ -37,7 +37,9 @@ export default function Home() {
                     <SkillSection />
                 </div>
                 <div className="container mx-auto px-3 pt-[6.25rem]">
-                    <SkillSection />
+                    <div>
+                        <div className="text-3xl text-white text-center p-64">Website Under Construction</div>
+                    </div>
                 </div>
             </div>
         </>
