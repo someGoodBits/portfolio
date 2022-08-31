@@ -6,6 +6,7 @@ import Loader from "../components/Loader";
 import Sidebar from "../components/Sidebar";
 import HeroSection from "../components/sections/HeroSection";
 import SkillSection from "../components/sections/SkillSection";
+import ExperienceSection from "../components/sections/ExperienceSection";
 
 export default function Home() {
 
@@ -13,7 +14,7 @@ export default function Home() {
 
     useTimeout(()=>{
         setIsLoaderVisible(false);
-    },100);
+    },2000);
 
     return (
         <>
@@ -35,6 +36,9 @@ export default function Home() {
                 </div>
                 <div className="container mx-auto px-3 pt-[6.25rem]">
                     <SkillSection />
+                </div>
+                <div className="container mx-auto px-3 pt-[6.25rem]">
+                    <ExperienceSection />
                 </div>
                 <div className="container mx-auto px-3 pt-[6.25rem]">
                     <div>
