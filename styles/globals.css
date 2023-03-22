@@ -6,15 +6,17 @@
     -webkit-tap-highlight-color: transparent ;
 }
 
-body {
-    background : linear-gradient(135deg,hsl(221, 17%, 18%),hsl(221, 17%, 8%));
-    background-image: url("/bg.png");
-    background-size: cover ;
-    min-height: 100vh ;
-}
-
 html {
     font-size: 13px ;
+    background : linear-gradient(135deg,hsl(221, 17%, 18%),hsl(221, 17%, 8%));
+    background-color: hsl(221, 17%, 8%) ;
+}
+
+body {
+    background-image: url("/bg.png");
+    background-attachment: fixed ;
+    width: 100% ;
+    background-repeat: no-repeat;
 }
 
 .sidebar-notch {

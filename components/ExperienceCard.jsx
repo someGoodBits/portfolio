@@ -14,7 +14,7 @@ const ExperienceCard = ({ logo = "", title = "", desc = "", duration = "", rever
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-[50rem] bg-gray-700"></div>
                 </div>
                 <div className="flex-1 flex items-center">
-                    <div className="flex-shrink-0 w-24 h-24">
+                    <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden">
                         <Image src={logo} alt={title} />
                     </div>
                     <div className="ml-4">
@@ -34,7 +34,7 @@ const ExperienceCard = ({ logo = "", title = "", desc = "", duration = "", rever
                         <span className="lg:hidden font-orbitron font-bold text-gray-600 uppercase">{duration}</span>
                         <div className="font-orbitron text-neutral-400">{desc}</div>
                     </div>
-                    <div className="flex-shrink-0 w-24 h-24 order-1 lg:order-3 mr-4 lg:mr-0">
+                    <div className="flex-shrink-0 w-24 h-24 order-1 lg:order-3 mr-4 lg:mr-0 rounded-full overflow-hidden">
                         <Image src={logo} alt={title} />
                     </div>
                 </div>

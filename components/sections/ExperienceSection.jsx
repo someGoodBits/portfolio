@@ -1,6 +1,7 @@
 import sleekSitesLogo from "../../assets/sleeksites.png";
 import nalndaLogo from "../../assets/nalnda.png";
 import connectofiLogo from "../../assets/connectofi.png";
+import zuoraLogo from "../../assets/zuora.png";
 import ExperienceCard from "../ExperienceCard";
 
 const ExperienceSection = () => {
@@ -11,10 +12,18 @@ const ExperienceSection = () => {
             </h1>
             <div className="relative max-w-[80rem] mx-auto mt-16 py-32">
                 <ExperienceCard
-                    logo={sleekSitesLogo}
-                    title="SleekSites"
-                    desc="Worked as a Frontend React Developer and built modern looking webapps for clients with ReactJS, Bootstrap 5, Firebase "
-                    duration="AUG 2021 - JAN 2022"
+                    logo={zuoraLogo}
+                    title="Zuora"
+                    reverse={true}
+                    desc="Zuora is the industry leader in Subscription Management Service"
+                    duration="JAN 2023 - PRESENT"
+                />
+
+                <ExperienceCard
+                    logo={nalndaLogo}
+                    title="Nalnda"
+                    desc="Nalnda is a decentralized marketplace for NFT based eBooks. I was involved in designing, creating, and integrating the frontend of a WEB3 application with blockchain."
+                    duration="MAY 2022 - JUL 2022"
                 />
 
                 <ExperienceCard
@@ -24,12 +33,11 @@ const ExperienceSection = () => {
                     desc="Designing and developing a platform for students to find interships"
                     duration="FEB 2022 - APR 2022"
                 />
-
                 <ExperienceCard
-                    logo={nalndaLogo}
-                    title="Nalnda"
-                    desc="Nalnda is a decentralized marketplace for NFT based eBooks. I was involved in designing, creating, and integrating the frontend of a WEB3 application with blockchain."
-                    duration="MAY 2022 - JUL 2022"
+                    logo={sleekSitesLogo}
+                    title="SleekSites"
+                    desc="Worked as a Frontend React Developer and built modern looking webapps for clients with ReactJS, Bootstrap 5, Firebase "
+                    duration="AUG 2021 - JAN 2022"
                 />
             </div>
         </div>
