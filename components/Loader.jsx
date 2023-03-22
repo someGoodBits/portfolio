@@ -18,7 +18,7 @@ const Loader = () => {
     }, []);
 
     return (
-        <div className="fixed w-screen h-screen top-0 left-0 z-10 bg-gray-900">
+        <div className="fixed w-screen h-screen top-0 left-0 z-[100] bg-gray-900">
             <div className="w-full h-full flex items-center justify-center">
                 <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

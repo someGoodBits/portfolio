@@ -1,8 +1,9 @@
+import { SECTIONS } from "../pages";
 import HeaderNavItem from "./HeaderNavItem";
 
-const Header = () => {
+const Header = ({scrollToSection}) => {
     return (
-        <header className="relative w-full h-[6.25rem] flex justify-between items-center">
+        <header className="relative w-full h-[6.25rem] select-none flex justify-between items-center">
             <div className="text-3xl font-orbitron font-black">
                 <span className="text-accent-500">&gt;</span>
                 <span className="text-gray-200">goodbits</span>
@@ -11,19 +12,19 @@ const Header = () => {
 
             <nav className="flex items-center">
                 <ul className="hidden lg:flex text-lg font-orbitron font-normal space-x-4 text-gray-500">
-                    <li>
+                    <li onClick={()=>scrollToSection(SECTIONS.HERO_SECTION)}>
                         <HeaderNavItem label="about" isActive={true} />
                     </li>
-                    <li>
+                    <li onClick={()=>scrollToSection(SECTIONS.SKILL_SECTION)}>
                         <HeaderNavItem label="skills" />
                     </li>
-                    <li>
+                    <li onClick={()=>scrollToSection(SECTIONS.EXPERIENCE_SECTION)}>
                         <HeaderNavItem label="experience" />
                     </li>
-                    <li>
+                    <li onClick={()=>scrollToSection(SECTIONS.PROJECTS_SECTION)}>
                         <HeaderNavItem label="projects" />
                     </li>
-                    <li>
+                    <li onClick={()=>scrollToSection(SECTIONS.CONTACT_SECTIONS)}>
                         <HeaderNavItem label="contact" />
                     </li>
                 </ul>
